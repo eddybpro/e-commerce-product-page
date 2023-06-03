@@ -30,8 +30,6 @@ let index = 0,
 indexDesktop = 0,
 quantNum = localStorage.getItem('quantNum') || 0;
 
-
-
 closeImgBtn.addEventListener('click', ()=>{
     absoluteWrapper.classList.toggle('none');
     document.querySelector('body').classList.toggle('body-bg');
@@ -39,15 +37,12 @@ closeImgBtn.addEventListener('click', ()=>{
     mainTxtWrapper.classList.toggle('filter');
 });
 
-
-
 desktopImg.addEventListener('click', ()=>{
     absoluteWrapper.classList.toggle('none');
     document.querySelector('body').classList.toggle('body-bg');
     mainImgWrapper.classList.toggle('filter');
     mainTxtWrapper.classList.toggle('filter');
 })
-
 
 desktopImagesSlider.forEach((img, idx)=>{
     img.style.left = `${idx * 100}%`;
@@ -82,7 +77,6 @@ prevBtnDesktop.addEventListener('click', ()=>{
     sliderFn(desktopImagesSlider, indexDesktop);
 })
 
-
 thumbnailImgDesktop.forEach((img, idx)=>{
     img.addEventListener('click',()=>{
         indexDesktop = idx;
@@ -95,7 +89,6 @@ thumbnailImgDesktop.forEach((img, idx)=>{
         img.style.opacity = '0.5';
     })
 })
-
 
 thumbnailImg.forEach((img, idx)=>{
     img.addEventListener('click', ()=>{
@@ -251,34 +244,3 @@ function createDiv(){
     `;
     cartBoxWrapper.append(div)
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
